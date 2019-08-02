@@ -13,12 +13,21 @@ spring:
         
 server:
   port: 8101
-
+  
 eureka:
   client:
-    registry-fetch-interval-seconds: 30 #拉取注册信息间隔时间，默认 30 秒
     service-url:
+<<<<<<< HEAD
       defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
   instance:
     lease-renewal-interval-in-seconds: 30 #心跳间隔时间，默认 30 秒
 
+=======
+      defaultZone: http://eureka1:2001/eureka, http://eureka1:2002/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+>>>>>>> branch 'master' of https://github.com/fubinjun/sp-config.git
